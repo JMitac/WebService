@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_principal" tools:context=".Principal"
+    android:weightSum="1">
+
+        <LinearLayout
+            android:layout_height="119dp"
+            android:layout_width="362dp"
+            android:orientation="horizontal"
+            android:paddingLeft="57dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAREGAS"
+                android:textSize="52dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/textView"
+                android:layout_marginTop="47dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtusuario"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginTop="34dp"
+            android:hint="@string/hint_name"
+            android:singleLine="true"
+            android:layout_alignEnd="@+id/textView" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="@string/hint_password"
+            android:singleLine="true"
+            android:id="@+id/txtpassword"
+            android:layout_below="@+id/editText"
+            android:layout_alignStart="@+id/editText"
+            android:layout_alignEnd="@+id/editText" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="Acceder"
+        android:textStyle="bold"
+        android:textColor="@color/texto"
+        android:background="@color/colorPrimary"
+        android:id="@+id/btnLogin"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.03" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="96dp"
+        android:layout_weight="0.16">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Eres usuario nuevo?"
+            android:textSize="14dp"
+            android:textColor="#000000"
+            android:id="@+id/textView2"
+            android:layout_marginTop="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrate"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/btnregister"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+    <script type="text/javascript" src="plugins/jqvalidation/jquery.validate.js"></script>
+
+$(document).ready(function() {
+$("#form-nuevo").validate();
+});
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+data-msg-required="ingrese un link (youtube)" data-msg-email="Ingrese una URL valida" data-rule-required="true"
