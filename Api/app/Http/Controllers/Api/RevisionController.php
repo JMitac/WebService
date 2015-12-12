@@ -46,6 +46,12 @@ class RevisionController extends BaseApiController
         return self::parseToJson(["message" => "success", "revisions" => $revisions]);
     }
 
+    public function getRevisionByClientCode($code)
+    {
+        $revision = Revision::where('cli_cod', '=', $code)->first();
+        return self::parseToJson(["message" => "success", "revision" => $revision]);
+    }
+
    
 
 

@@ -20,3 +20,6 @@ Route::post('client/new', 'Api\ClienteController@create');
 Route::get('client/all', 'Api\ClienteController@getAllClients');
 Route::post('revision/new', 'Api\RevisionController@create');
 Route::get('revision/all', 'Api\RevisionController@getAllRevisions');
+Route::get('client/{code}/revision', 'Api\RevisionController@getRevisionByClientCode');
+
+
