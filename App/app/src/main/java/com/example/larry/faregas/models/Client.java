@@ -1,9 +1,11 @@
 package com.example.larry.faregas.models;
 
+import java.io.Serializable;
+
 /**
  * Created by BillyCaballero on 11/12/15.
  */
-public class Client {
+public class Client implements Serializable{
 
     private String codigo;
     private String dni;

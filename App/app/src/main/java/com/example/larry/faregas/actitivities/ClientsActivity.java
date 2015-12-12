@@ -2,10 +2,13 @@ package com.example.larry.faregas.actitivities;
 
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
 
@@ -138,11 +141,25 @@ public class ClientsActivity extends AppCompatActivity {
         adapter = new ClientsArrayAdapter(this, clients);
         ListView listView = (ListView) findViewById(R.id.list_view_clients);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                goToClientDetail(i);
+            }
+        });
     }
 
     public void addNewClient(Client client){
         clients.add(client);
         adapter.notifyDataSetChanged();
+    }
+
+    public void goToClientDetail(int position){
+        Intent intent = new Intent(this, ClientDetail.class);
+        Client client = clients.get(position);
+        intent.putExtra("client", client);
+        startActivity(intent);
     }
 
 }
