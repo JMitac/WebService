@@ -86,5 +86,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void goToClientsActivity(){
         Intent intent = new Intent(this, ClientsActivity.class);
         startActivity(intent);
+        finish();
     }
 }
