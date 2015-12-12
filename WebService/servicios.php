@@ -69,10 +69,9 @@
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Solicitar Servicio</a>
-      <!-- Modal Structure -->
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Solicitar Servicio</a>      
       <div id="modal1" class="modal">
         <div class="modal-content">
           <h4>Solicitud de Servicio</h4>
@@ -109,7 +108,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Footer -->
   <?php include('layout/footer.php'); ?>

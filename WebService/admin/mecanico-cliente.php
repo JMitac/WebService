@@ -17,7 +17,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FareGas | Cliente</title>
+        <title>FareGas | Mecanico</title>
 
         <!-- Vendor CSS -->
         <link href="vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
                 </li>
             
                 <li class="logo hidden-xs">
-                    <a href="index.php">FareGas | Asistente </a>
+                    <a href="index.php">FareGas | Mecanico </a>
                 </li>
                 
                 <li class="pull-right">
@@ -155,7 +155,7 @@
                               <table id="cliente" class="table table-bordered table-striped" style="text-align:center;">
                                 <thead>
                                   <tr>
-                                    <th>CODIGO</th>
+                                    <th>COD CLIENTE</th>                                    
                                     <th>DNI</th>
                                     <th>FOTO</th>
                                     <th>NOMBRE</th>
@@ -164,7 +164,6 @@
                                     <th>TIPO</th>
                                     <th>MARCA</th>
                                     <th>MODELO</th>
-                                    <th>PLACA</th>
                                     <!-- <th>Acción</th> -->
                                   </tr>
                                 </thead>
@@ -179,11 +178,11 @@
                          </div>
 
                    </div>
-                   <!-- <div class="row">
+                   <div class="row">
                         <div class="col-sm-12"> 
                            <div class="card" id="formulariohide">
                                 <div class="card-header">
-                                    <h2>Nuevo Cliente</h2>
+                                    <h2>Nueva Revision</h2>
                                 </div>
                                 
                                 <div class="card-body card-padding">
@@ -191,91 +190,70 @@
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">DNI</label>
-                                                    <input type="hidden" id ="cod" name="cod">
-                                                    <input id="cli_dni" name="dni" required type="text" class="form-control" placeholder="Documento de Identidad">
+                                                    <label for="exampleInputEmail1">COD-CLIENTE</label>
+                                                    <input id="cli_cod" name="cod" required type="text" class="form-control" placeholder="Codigo de Cliente">
                                                 </div>    
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Nombre</label>
-                                                     <input id="cli_nom" name="nom" required type="text" class="form-control" placeholder="Ingrese el Nombre del Cliente">
+                                                    <label for="exampleInputEmail1">Motor</label>
+                                                     <input id="rev_motor" name="mot" required type="text" class="form-control" placeholder="Estado del Motor">
                                                 </div>    
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Apellido Paterno</label>
-                                                     <input id="cli_pat" name="pater" required type="text" class="form-control" placeholder="Ingrese el Telefono del Cliente">
+                                                    <label for="exampleInputEmail1">Tubo de Escape</label>
+                                                     <input id="rev_tub" name="tub" required type="text" class="form-control" placeholder="Estado del tubo de escape">
                                                 </div>    
                                             </div>  
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Apellido Materno</label>
-                                                     <input id="cli_mat" name="mater" required type="text" class="form-control" placeholder="Ingrese el Email del Cliente">
+                                                    <label for="exampleInputEmail1">Bujias</label>
+                                                     <input id="rev_buj" name="buj" required type="text" class="form-control" placeholder="Estado de las Bujias">
                                                 </div>        
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Telefono</label>
-                                                     <input id="cli_tel" name="tel" required type="text" class="form-control" placeholder="Ingrese la Marca del Vehiculo del Cliente">
+                                                    <label for="exampleInputEmail1">Bobinas</label>
+                                                     <input id="rev_bob" name="bob" required type="text" class="form-control" placeholder="Estado de las Bobinas">
                                                 </div>        
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Email</label>
-                                                     <input id="cli_mail" name="mail" required type="text" class="form-control" placeholder="Ingrese el Modelo del Vehiculo del Cliente">
+                                                    <label for="exampleInputEmail1">Radidador</label>
+                                                     <input id="rev_rad" name="rad" required type="text" class="form-control" placeholder="Estado del Radiador">
                                                 </div>        
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Direccion</label>
-                                                     <input id="cli_dir" name="dire" required type="text" class="form-control" placeholder="Ingrese el Email del Cliente">
+                                                    <label for="exampleInputEmail1">Mangueras</label>
+                                                     <input id="rev_man" name="man" required type="text" class="form-control" placeholder="Estado de las Mangueras">
                                                 </div>        
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Tipo Vehiculo</label>
-                                                     <input id="cli_tip" name="tip" required type="text" class="form-control" placeholder="Ingrese la Marca del Vehiculo del Cliente">
+                                                    <label for="exampleInputEmail1">Filtros</label>
+                                                     <input id="rev_fil" name="fil" required type="text" class="form-control" placeholder="Estado de los filtros">
                                                 </div>        
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Marca</label>
-                                                     <input id="cli_marca" name="marc" required type="text" class="form-control" placeholder="Ingrese el Modelo del Vehiculo del Cliente">
+                                                    <label for="exampleInputEmail1">Check</label>
+                                                     <input id="rev_check" name="check" required type="text" class="form-control" placeholder="Pasa las revisiones?">
                                                 </div>        
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Modelo</label>
-                                                     <input id="cli_model" name="mod" required type="text" class="form-control" placeholder="Ingrese el Email del Cliente">
-                                                </div>        
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group fg-line">
-                                                    <label for="exampleInputEmail1">Placa</label>
-                                                     <input id="cli_pla" name="pla" required type="text" class="form-control" placeholder="Ingrese la Marca del Vehiculo del Cliente">
-                                                </div>        
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group fg-line">                                             
-                                                    <label for="exampleInputEmail1">Foto</label>
-                                                    <input name="img"  type="file" class="form-control" > 
-                                                </div>        
-                                            </div>
-                                        </div>                              
+                                        </div>                            
                                         <button type="submit" onclick="CKupdate();" class="btn btn-primary btn-sm m-t-10 waves-effect">Agregar</button>
                                         <a onclick="ocultaformulario();"  class="btn btn-danger btn-sm m-t-10 waves-effect">Cancelar</a>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                   </div> -->
+                   </div>
                 </div>
             </section>
         </section>
