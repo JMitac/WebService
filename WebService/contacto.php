@@ -20,42 +20,46 @@
     <?php include('layout/slider.php'); ?>
   <!-- Cuerpo de Pagina -->
   <div class="container">
+    <h4>Contacto</h4>                
     <div class="row">
-      <div class="col s12 m12 l12">
-        <h4>Contactenos</h4>
-        <div class="divider"></div>
-          <div class="col s6 m6  l6">
-            <form>
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">Nombre</label>
-                </div>
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">phone</i>
-                  <input id="icon_telephone" type="tel" class="validate">
-                  <label for="icon_telephone">Telefono</label>
-                </div>
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">email</i>
-                  <input id="email" type="email" class="validate">
-                  <label for="email" data-error="wrong" data-success="right">Email</label>
-                </div>
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">work</i>
-                  <input id="email" type="email" class="validate">
-                  <label for="email" data-error="wrong" data-success="right">Asunto</label>
-                </div>
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">mode_edit</i>
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">First Name</label>
-                </div>
-            </form>
-          </div> 
-          <div class="col s6 m6  l6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.3335068637994!2d-77.06148508518771!3d-12.020545591484751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cedfcd2e4023%3A0xbcd96fbde1afc71f!2ssan+martin+de+porres!5e0!3m2!1ses!2spe!4v1447564487845" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="col s12 m7 l12"><!-- .s MOBILE .m TABLET .l DESKTOP-->
+        <div class="row">
+          <form id="contact-form" role="form" class="col s12 m12 l6" method="post">
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="mdi-action-account-circle prefix"></i>
+                <input id="contact-name" name="name" type="text" class="validate" placeholer="Escribe tu nombre.."><!--required-->
+                <label for="first_name contact-name">Nombre</label>
+              </div>                                    
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="mdi-communication-email prefix"></i>
+                <input id="contact-email" type="email" name="email" class="validate" required>
+                <label for="email contact-email">E-Mail</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="mdi-communication-phone prefix"></i>
+                <input id="tel telefono contact-telefono" name="telefono" type="tel" class="validate" required>
+                <label for="telephone contact-telefono">Telefono</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="mdi-communication-comment prefix"></i>
+                <textarea id="mensaje contact-message" name="message" class="materialize-textarea" required></textarea>
+                <label for="mensaje contact-message">Mensaje</label>
+              </div>
+            </div>
+            <input  type="submit"  value="Enviar" class="btn btn-default" />
+          </form>
+          <div class="col s12  m12 l6">
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d12511.39830197604!2d-76.99209999731154!3d-11.968470615737028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x9105c56829b64db3%3A0x8ae40ea9849c2f7e!2sSan+Mart%C3%ADn!3m2!1d-11.9746191!2d-76.99986129999999!4m5!1s0x9105c54803283327%3A0x51cbde03e4d3cc74!2sBay%C3%B3var%2C+Av.+Pr%C3%B3ceres+de+la+independencia%2C+San+Juan+de+Lurigancho!3m2!1d-11.9597841!2d-76.98751539999999!5e0!3m2!1ses!2spe!4v1443715459540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -64,11 +68,11 @@
   <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
     <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-
-  <script src="js/materialize.js"></script>
-  <script>
-    $(".button-collapse").sideNav();
-  </script>
+    <script src="js/email.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+      $(".button-collapse").sideNav();
+    </script>
 </head>
 <body>
   

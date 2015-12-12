@@ -17,7 +17,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FareGas | Cliente</title>
+        <title>FareGas | Mecanico</title>
 
         <!-- Vendor CSS -->
         <link href="vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
                 </li>
             
                 <li class="logo hidden-xs">
-                    <a href="index.php">FareGas | Asistente </a>
+                    <a href="index.php">FareGas | Mecanico </a>
                 </li>
                 
                 <li class="pull-right">
@@ -145,7 +145,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h2>Mantenimiento de Cliente</h2>
+                            <h2>Certificaciones</h2>
                         </div>                       
                 
                           <div class="card-header">
@@ -155,19 +155,14 @@
                               <table id="cliente" class="table table-bordered table-striped" style="text-align:center;">
                                 <thead>
                                   <tr>
-                                    <th>DNI</th>
-                                    <th>Foto</th>
                                     <th>Nombre</th>
-                                    <th>Paterno</th>
-                                    <th>Materno</th>
-                                    <th>Telefono</th>
-                                    <th>Email</th>
-                                    <th>Direccion</th>
-                                    <th>Tipo</th>
+                                    <th>Apellido</th>
+                                    <th>TipoVehiculo</th>
                                     <th>Marca</th>
-                                    <th>Modelo</th>
-                                    <th>Placa</th>
-                                    <th>Acción</th>
+                                    <th>Motor</th>
+                                    <th>Tubo</th>
+                                    <th>Bujias</th>
+                                    <th>Filtros</th>
                                   </tr>
                                 </thead>
                               </table>
@@ -175,9 +170,9 @@
                               </div><br>
                             </div><br>
                             <!-- /.box-body -->
-                             <div class="box-footer">
+                            <!-- <div class="box-footer">
                                    <input  class="btn bgm-green waves-effect" type='submit' name='boton' value='Ingresar Nuevo Cliente' onclick="muestraformulario();">
-                                   </div>            
+                            </div>             -->
                          </div>
 
                    </div>
@@ -343,7 +338,7 @@
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <![endif]-->
-        <script src="js/cliente.js"></script>
+        <script src="js/Certificaciones.js"></script>
         <script src="js/functions.js"></script>
         <script src="js/demo.js"></script>  
         <script type="text/javascript">

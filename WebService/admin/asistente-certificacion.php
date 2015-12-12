@@ -10,18 +10,14 @@
     if($_SESSION["rol"] != 'S'){
         header('Location: php/controller/login.controller.php?salir=exit');
     }
-
 ?>
-
-
-
 <!DOCTYPE html>
 <!--[if IE 9 ]><html class="ie9"><![endif]-->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FareGas | Certificacion</title>
+        <title>FareGas | Asistente</title>
 
         <!-- Vendor CSS -->
         <link href="vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
@@ -47,7 +43,7 @@
                 </li>
             
                 <li class="logo hidden-xs">
-                    <a href="admin-index.php">FareGas</a>
+                    <a href="index.php">FareGas | Asistente </a>
                 </li>
                 
                 <li class="pull-right">
@@ -111,7 +107,6 @@
                     <ul class="main-menu">
                         <li><a href="asistente-index.php"><i class="md md-dashboard"></i> Panel de Control</a></li>
                         <li><a href="asistente-cliente.php"><i class="md md-work"></i> Clientes</a></li>
-                        <!-- <li><a href="asistente-vehiculo.php"><i class="md md-people"></i> Vehiculo</a></li> -->
                         <li class="active"><a href="asistente-certificacion.php"><i class="md md-notifications"></i>Certificacion</a></li>
                     </ul>
                 </div>
@@ -147,63 +142,133 @@
                         </ul>
                         
                     </div>
-       <!--             <div class="card">
+                    <div class="card">
                         <div class="card-header">
-                            <h2>Mantenimiento de la Mision</h2>
+                            <h2>Certificaciones</h2>
                         </div>                       
                 
                           <div class="card-header">
                             <div class="box-body table-responsive">
-                              <table id="example1" class="table table-bordered table-striped" style="text-align:center;">
+                            <div class="col-md-12">
+
+                              <table id="cliente" class="table table-bordered table-striped" style="text-align:center;">
                                 <thead>
                                   <tr>
-                                    <th>Código</th>
-                                    <th>Nombres</th>
-                                    <th>Descripción</th>
-                                    <th>Acción</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>TipoVehiculo</th>
+                                    <th>Marca</th>
+                                    <th>Motor</th>
+                                    <th>Tubo</th>
+                                    <th>Bujias</th>
+                                    <th>Filtros</th>
                                   </tr>
                                 </thead>
+                              </table>
 
-                                
-                              </table><br>
+                              </div><br>
                             </div><br>
-                             /.box-body 
-                             <div class="box-footer">
-                                   <input  class="btn bgm-green waves-effect" type='submit' name='boton' value='Ingresar Nuevo' onclick="muestraformulario();">
-                                   </div>            
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <a  class="btn bgm-green waves-effect" href="contactoexcel.php" ='submit' name='boton' >Exportar a Excel</a>
+                            </div>
+                            <!-- <div class="box-footer">
+                                <input  class="btn bgm-green waves-effect" type='submit' name='boton' value='Ingresar Nuevo Cliente' onclick="muestraformulario();">
+                            </div> -->            
                          </div>
 
-                   </div>   -->
+                   </div>
                    <div class="row">
                         <div class="col-sm-12"> 
-                           <div class="card" id="">
+                           <div class="card" id="formulariohide">
                                 <div class="card-header">
-                                    <h2>Modificar Mision/Vision</h2>
+                                    <h2>Nuevo Cliente</h2>
                                 </div>
                                 
                                 <div class="card-body card-padding">
-                                    <form role="form" id="formMisi">
-                                    <!--
-                                        <div class="form-group fg-line">
-                                            <label for="exampleInputEmail1">Título del Producto</label>
-                                             <input name="titu" required type="text" class="form-control" placeholder="Nombre">
+                                    <form role="form" id="formcliente"> 
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">DNI</label>
+                                                    <input type="hidden" id ="cod" name="cod">
+                                                    <input id="cli_dni" name="dni" required type="text" class="form-control" placeholder="Documento de Identidad">
+                                                </div>    
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Nombre</label>
+                                                     <input id="cli_nom" name="nom" required type="text" class="form-control" placeholder="Ingrese el Nombre del Cliente">
+                                                </div>    
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Apellido Paterno</label>
+                                                     <input id="cli_pat" name="pater" required type="text" class="form-control" placeholder="Ingrese el Telefono del Cliente">
+                                                </div>    
+                                            </div>  
                                         </div>
-                                    -->
-                                        <div class="form-group fg-line">
-                                            <label for="exampleInputEmail1">Descripción Mision/Vision</label>
-                                            <div class="fg-line">
-                                            <textarea name="cuerpo" required id="editor1" class="ckeditor form-control" rows="10" cols="80">
-                                                <?php echo $misvis[0]->cue; ?><!--VOY A PEDIR EL NOMBRE DE LA COLUMNA: cue -->
-                                            </textarea>                                                   
-                                            </div>                                    
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Apellido Materno</label>
+                                                     <input id="cli_mat" name="mater" required type="text" class="form-control" placeholder="Ingrese el Email del Cliente">
+                                                </div>        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Telefono</label>
+                                                     <input id="cli_tel" name="tel" required type="text" class="form-control" placeholder="Ingrese la Marca del Vehiculo del Cliente">
+                                                </div>        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Email</label>
+                                                     <input id="cli_mail" name="mail" required type="text" class="form-control" placeholder="Ingrese el Modelo del Vehiculo del Cliente">
+                                                </div>        
+                                            </div>
                                         </div>
-                                        <!--
-                                        <div class="form-group fg-line">
-                                            <label for="exampleInputEmail1">Imagen Producto</label>
-                                             <input name="img" required type="file" class="form-control" placeholder="Nombre">
-                                        </div>                                
-                                        -->
-                                        <button type="submit" onclick="CKupdate();" class="btn btn-primary btn-sm m-t-10 waves-effect">Modificar</button>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Direccion</label>
+                                                     <input id="cli_dir" name="dire" required type="text" class="form-control" placeholder="Ingrese el Email del Cliente">
+                                                </div>        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Tipo Vehiculo</label>
+                                                     <input id="cli_tip" name="tip" required type="text" class="form-control" placeholder="Ingrese la Marca del Vehiculo del Cliente">
+                                                </div>        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Marca</label>
+                                                     <input id="cli_marca" name="marc" required type="text" class="form-control" placeholder="Ingrese el Modelo del Vehiculo del Cliente">
+                                                </div>        
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Modelo</label>
+                                                     <input id="cli_model" name="mod" required type="text" class="form-control" placeholder="Ingrese el Email del Cliente">
+                                                </div>        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">
+                                                    <label for="exampleInputEmail1">Placa</label>
+                                                     <input id="cli_pla" name="pla" required type="text" class="form-control" placeholder="Ingrese la Marca del Vehiculo del Cliente">
+                                                </div>        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group fg-line">                                             
+                                                    <label for="exampleInputEmail1">Foto</label>
+                                                    <input name="img"  type="file" class="form-control" > 
+                                                </div>        
+                                            </div>
+                                        </div>                              
+                                        <button type="submit" onclick="CKupdate();" class="btn btn-primary btn-sm m-t-10 waves-effect">Agregar</button>
                                         <a onclick="ocultaformulario();"  class="btn btn-danger btn-sm m-t-10 waves-effect">Cancelar</a>
                                     </form>
                                 </div>
@@ -275,9 +340,15 @@
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <![endif]-->
-        <script src="js/mision.js"></script>
+        <script src="js/Certificaciones.js"></script>
         <script src="js/functions.js"></script>
-        <script src="js/demo.js"></script>       
+        <script src="js/demo.js"></script>  
+        <script type="text/javascript">
+          $(function () {
+            $('#cliente').dataTable();
+          });
+        </script>    
+
         <script type="text/javascript">
       $(function () {
         $("#example1").dataTable();

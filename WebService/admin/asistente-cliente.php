@@ -107,7 +107,6 @@
                     <ul class="main-menu">
                         <li><a href="asistente-index.php"><i class="md md-dashboard"></i> Panel de Control</a></li>
                         <li class="active"><a href="asistente-cliente.php"><i class="md md-work"></i> Clientes</a></li>
-                        <!-- <li><a href="asistente-vehiculo.php"><i class="md md-people"></i> Vehiculo</a></li> -->
                         <li><a href="asistente-certificacion.php"><i class="md md-notifications"></i>Certificacion</a></li>
                     </ul>
                 </div>
